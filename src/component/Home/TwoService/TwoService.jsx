@@ -5,7 +5,7 @@ import photo2 from '../../../photos/banner-2.jpg';
 
 const TwoService = () => {
     return (
-        <div className='box-serv'>
+        <div id='purposes' className='box-serv'>
             <h1 className='text-center mt-4' style={{color:'rgba(216, 71, 4, 0.894)'}}>Our Purposes</h1>
             <div className="purpose">
                 <div className="purpose-type">

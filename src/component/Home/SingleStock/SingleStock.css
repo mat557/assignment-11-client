@@ -1,0 +1,28 @@
+.detail-holder{
+    border: 1px solid rgba(216, 71, 4, 0.894);
+    width: 320px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.btn-style{
+    color: white;
+    text-decoration: none;
+    border: 0;
+    background: rgba(216, 71, 4, 0.894);
+    padding: 7px 55px;
+    font-size: 15px;
+    font-weight: 750;
+    margin-bottom: 5px;
+}
+
+.description{
+    border-top: 1px solid rgba(216, 71, 4, 0.894);
+    width: 80%;
+    margin: 5px auto;
+}
+
+.detail-holder img{
+    width: 100%;
+    border-radius: 8px;
+}
