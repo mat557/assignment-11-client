@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Register from "./component/Authenticate/Register/Register";
 import Home from "./component/Home/Home/Home";
 import SingleServiceDetail from "./component/Home/SingleServiceDetail/SingleServiceDetail";
 import Login from "./component/Login/Login";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/singleStock/:idOfService" element={<SingleServiceDetail></SingleServiceDetail>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
