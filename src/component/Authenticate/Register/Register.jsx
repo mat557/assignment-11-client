@@ -1,14 +1,27 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../Firebase.init';
 
 const Register = () => {
+    const navigate = useNavigate();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+
+    if(user){
+        navigate('/home');
+    }
+
     const handleRegister =(event) =>{
         event.preventDefault();
         const email = event.target.email.value;
         const pass = event.target.password.value;
-
-        console.log(email,pass)
+        createUserWithEmailAndPassword(email,pass);
     }
   return (
     <div className="mx-auto w-50">
