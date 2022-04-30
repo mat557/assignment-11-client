@@ -9,3 +9,14 @@
     grid-template-columns: repeat(3,1fr);
     grid-gap: 15px;
 }
+
+
+
+@media only screen and (max-width:570px){
+    .stock-holder{ 
+        width: 80%;
+        margin:15px auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
