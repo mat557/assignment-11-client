@@ -2,7 +2,7 @@ import React from "react";
 import "./Login.css";
 import { Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../Firebase.init";
 import EmailLogin from "../Authenticate/EmailLogin/EmailLogin";
 
@@ -14,6 +14,9 @@ const Login = () => {
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail, sending, errorReset] =
+    useSendPasswordResetEmail(auth);
 
   if (user) {
     navigate(from, { replace: true });
@@ -33,6 +36,12 @@ const Login = () => {
 
     signInWithEmailAndPassword(email, pass);
   };
+
+  const passwordReset = async(event) =>{
+    const email = event.target.email.value;
+    await sendPasswordResetEmail(email);
+  }
+
 
   // const visiteWithNevigate = (event) =>{
   //     navigate('/register');
@@ -67,7 +76,7 @@ const Login = () => {
         </button>
       </Form>
       <p className="text-center">
-        New Here?{" "}
+        New Here?
         <Link
           to="/register"
           className="pe-auto text-decoration-none"
@@ -75,6 +84,12 @@ const Login = () => {
         >
           Please Register
         </Link>
+      </p>
+      <p className="w-50 mx-auto d-block">
+        Forget Password?
+        <button onClick={passwordReset} className="btn btn-link text-success pe-auto text-decoration-none">
+          Reset Password
+        </button>
       </p>
       {errorMessage}
       <EmailLogin></EmailLogin>

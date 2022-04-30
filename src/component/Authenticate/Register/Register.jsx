@@ -12,11 +12,18 @@ const Register = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
 
     if(user){
         navigate('/home');
     }
+
+    let errorMessage;
+    if(error){
+        errorMessage = <p className="text-danger text-center">Error: {error?.message}</p>
+    }
+
+
 
     const handleRegister =(event) =>{
         event.preventDefault();
@@ -62,6 +69,7 @@ const Register = () => {
           Please Login
         </Link>
       </p>
+      {errorMessage}
       <EmailLogin></EmailLogin>
     </div>
   );
