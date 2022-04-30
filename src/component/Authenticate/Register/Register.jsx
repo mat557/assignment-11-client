@@ -3,6 +3,7 @@ import { Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase.init';
+import EmailLogin from "../EmailLogin/EmailLogin";
 
 const Register = () => {
     const navigate = useNavigate();
@@ -46,9 +47,7 @@ const Register = () => {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+        
         <button className="btn-style mx-auto d-block" type="submit">
           Register
         </button>
@@ -63,6 +62,7 @@ const Register = () => {
           Please Login
         </Link>
       </p>
+      <EmailLogin></EmailLogin>
     </div>
   );
 };

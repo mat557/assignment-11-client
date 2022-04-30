@@ -4,6 +4,7 @@ import {  Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate} from "react-router-dom";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../Firebase.init";
+import EmailLogin from "../Authenticate/EmailLogin/EmailLogin";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -48,14 +49,13 @@ const Login = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" name="password" placeholder="Password" required/>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+        
         <button className="btn-style mx-auto d-block"  type="submit">
           Login
         </button>
       </Form>
       <p className="text-center">New Here? <Link to='/register' className="pe-auto text-decoration-none" style={{color:"rgba(216, 71, 4, 0.894)"}}>Please Register</Link></p>
+      <EmailLogin></EmailLogin>
     </div>
   );
 };
