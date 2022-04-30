@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Login.css";
 import { Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../Firebase.init";
 import EmailLogin from "../Authenticate/EmailLogin/EmailLogin";
+import Loading from "../Shared/Loading/Loading";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
+  const emailRef = useRef(''); 
+  const passRef = useRef(''); 
   const from = location.state?.from?.pathname || "/";
 
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -22,6 +26,10 @@ const Login = () => {
     navigate(from, { replace: true });
   }
 
+  if(loading || sending){
+    return <Loading></Loading>
+}
+
   let errorMessage;
   if (error) {
     errorMessage = (
@@ -31,15 +39,19 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const email = event.target.email.value;
-    const pass = event.target.password.value;
+    // const email = event.target.email.value;
+    // const pass = event.target.password.value;
 
+    const email = emailRef.current.value;
+    const pass = passRef.current.value;
     signInWithEmailAndPassword(email, pass);
   };
 
-  const passwordReset = async(event) =>{
-    const email = event.target.email.value;
+  const passwordReset = async() =>{
+    const email = emailRef.current.value;
+    // const email = event.target.email.value;
     await sendPasswordResetEmail(email);
+    toast("Email Sent");
   }
 
 
@@ -54,8 +66,8 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            ref={emailRef}
             type="email"
-            name="email"
             placeholder="Enter email"
             required
           />
@@ -65,7 +77,7 @@ const Login = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
-            name="password"
+            ref={passRef}
             placeholder="Password"
             required
           />
@@ -93,6 +105,7 @@ const Login = () => {
       </p>
       {errorMessage}
       <EmailLogin></EmailLogin>
+      <ToastContainer />
     </div>
   );
 };

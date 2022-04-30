@@ -2,10 +2,16 @@ import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 
 const EmailLogin = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
+
+
+  if(loading){
+      return <Loading></Loading>
+  }
 
   let errorMessage;
   if (error) {
