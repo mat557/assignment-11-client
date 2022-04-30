@@ -1,39 +1,42 @@
 import React from "react";
-import './Login.css';
-import {  Form } from "react-bootstrap";
-import { Link, useLocation, useNavigate} from "react-router-dom";
+import "./Login.css";
+import { Form } from "react-bootstrap";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../Firebase.init";
 import EmailLogin from "../Authenticate/EmailLogin/EmailLogin";
 
 const Login = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-    const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from?.pathname || "/";
 
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-      ] = useSignInWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
 
-    if(user){
-        navigate(from ,{replace: true});
-    }
-    const handleSubmit = (event) =>{
-        event.preventDefault();
-        const email = event.target.email.value;
-        const pass = event.target.password.value;
+  if (user) {
+    navigate(from, { replace: true });
+  }
 
-        signInWithEmailAndPassword(email,pass);
-    }
+  let errorMessage;
+  if (error) {
+    errorMessage = (
+      <p className="text-danger text-center">Error: {error?.message}</p>
+    );
+  }
 
-    // const visiteWithNevigate = (event) =>{
-    //     navigate('/register');
-    // }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const pass = event.target.password.value;
 
+    signInWithEmailAndPassword(email, pass);
+  };
+
+  // const visiteWithNevigate = (event) =>{
+  //     navigate('/register');
+  // }
 
   return (
     <div className="mx-auto w-50">
@@ -41,20 +44,39 @@ const Login = () => {
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" name="email" placeholder="Enter email" required/>
-          
+          <Form.Control
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            required
+          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" name="password" placeholder="Password" required/>
+          <Form.Control
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
         </Form.Group>
-        
-        <button className="btn-style mx-auto d-block"  type="submit">
+
+        <button className="btn-style mx-auto d-block" type="submit">
           Login
         </button>
       </Form>
-      <p className="text-center">New Here? <Link to='/register' className="pe-auto text-decoration-none" style={{color:"rgba(216, 71, 4, 0.894)"}}>Please Register</Link></p>
+      <p className="text-center">
+        New Here?{" "}
+        <Link
+          to="/register"
+          className="pe-auto text-decoration-none"
+          style={{ color: "rgba(216, 71, 4, 0.894)" }}
+        >
+          Please Register
+        </Link>
+      </p>
+      {errorMessage}
       <EmailLogin></EmailLogin>
     </div>
   );
