@@ -7,6 +7,8 @@ import Loading from "../../Shared/Loading/Loading";
 const EmailLogin = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
 
   if(loading){
@@ -19,7 +21,8 @@ const EmailLogin = () => {
   }
 
   if(user){
-    navigate('/home')
+    // navigate('/home')
+    navigate(from, { replace: true });
   }
 
   return (
