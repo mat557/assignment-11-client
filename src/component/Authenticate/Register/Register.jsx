@@ -1,13 +1,16 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate , useLocation } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase.init';
 import EmailLogin from "../EmailLogin/EmailLogin";
 import Loading from "../../Shared/Loading/Loading";
 
 const Register = () => {
+    const location = useLocation();
     const navigate = useNavigate();
+    const from = location.state?.from?.pathname || "/";
+
     const [
         createUserWithEmailAndPassword,
         user,
@@ -21,7 +24,8 @@ const Register = () => {
     }
 
     if(user){
-        navigate('/home');
+        // navigate('/home');
+        navigate(from,{replace : true});
     }
 
     let errorMessage;

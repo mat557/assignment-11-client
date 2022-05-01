@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Register from "./component/Authenticate/Register/Register";
 import RequireAuth from "./component/Authenticate/RequireAuth/RequireAuth";
+import Blog from "./component/Blog/Blog";
 import Home from "./component/Home/Home/Home";
 import SingleServiceDetail from "./component/Home/SingleServiceDetail/SingleServiceDetail";
 import Login from "./component/Login/Login";
@@ -24,6 +25,7 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
