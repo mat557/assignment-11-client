@@ -16,7 +16,7 @@ const StockDetails = () => {
 
     return (
         <div id='stock' className='total-stock'>
-            <h1 className='text-center mt-4' style={{color:'rgba(216, 71, 4, 0.894)'}}>Check Our Stored Product</h1>
+            <h1 className='text-center mt-4' style={{color:'rgba(216, 71, 4, 0.894)'}}>Check Your Store</h1>
             <div className='stock-holder'>
                 {
                     products.map(product=>(

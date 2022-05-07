@@ -1,5 +1,19 @@
 # Getting Started with Create React App
 
+# website name : Knowledge Store
+
+# live website link :
+
+    
+# About the web application :
+ the website is created to help someone who is trying or thinking to run a online business where he can sell deferent kind of books .We offer them unlimited amount of storage from where he can store and sell books.We also provide home delivary services according to our client need. All the owner need to do is co create a id in our website and he is able to go.One can manage everything he/she has  stored in our warehouse  .
+
+ * email and password base security
+ * inventory page
+ * Check out detail about single product
+ * router
+ * need to loged in to have access in some page
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

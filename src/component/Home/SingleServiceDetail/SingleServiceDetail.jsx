@@ -8,7 +8,7 @@ const SingleServiceDetail = () => {
   const navigate = useNavigate();
   const { idOfService } = useParams();
   const [service,setService] = useState({});
-  const [res,setRest] = useState({})
+  const [rest,setRest] = useState({})
 
   useEffect(()=>{
     const url = `http://localhost:5000/services/${idOfService}`;
@@ -27,23 +27,24 @@ const SingleServiceDetail = () => {
     })
   },[])
   
-  const handleDelivered = (num) =>{
+  const handleDelivered = () =>{
     const total =  service.quantity;
-    const final = parseInt(total) + num;
-
-    console.log(total,final);
+    const final = (total) - 1;
     const url = `http://localhost:5000/services/${idOfService}`;
     fetch(url,{
       method :'PUT',
       headers :{
         'content-type': 'application/json',
       },
-      body : JSON.stringify(final)
+      body : JSON.stringify({final})
     })
     .then(res => res.json())
     .then(product =>{
       console.log(product);
     })
+    .catch(error => {
+      console.log(error);
+  })
   }
 
   const handleManage = () =>{
@@ -63,9 +64,9 @@ const SingleServiceDetail = () => {
               <Card.Text>
                 {service.description}
               </Card.Text>
-              <p>Price:{service.price} & Quantity :{res.quantity}</p>
+              <p>Price:{service.price} & Quantity :{rest.quantity}</p>
               <p>Provider:{service.provider}</p>
-              <button onClick={() => handleDelivered(-1)} className="btn-style mx-auto d-block">Delivered</button>
+              <button onClick={handleDelivered} className="btn-style mx-auto d-block">Delivered</button>
             </Card.Body>
           </Card>
         </div>

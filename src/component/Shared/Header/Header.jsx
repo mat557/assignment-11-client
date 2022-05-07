@@ -25,11 +25,18 @@ const Header = () => {
             <Nav.Link href="home#stock">Stock</Nav.Link> */}
           </Nav>
           <Nav>
+            {
+              user ?
+              <Nav.Link as={Link} to="inventory">Manage</Nav.Link>
+              :
+              ''
+            }
             <Nav.Link as={Link} to="about">About Us</Nav.Link>
             <Nav.Link as={Link} to="blog">Blog</Nav.Link>
             {
             user ? 
               <button className="btn btn-link text-white text-decoration-none" onClick={handleSignOut}>Log out</button>
+              
             : 
               <Nav.Link as={Link} to="Login">
                 Login
