@@ -25,7 +25,6 @@ const Header = () => {
             <Nav.Link href="home#stock">Stock</Nav.Link> */}
           </Nav>
           <Nav>
-            <Nav.Link as={Link} to="inventory">Manage</Nav.Link>
             <Nav.Link as={Link} to="about">About Us</Nav.Link>
             <Nav.Link as={Link} to="blog">Blog</Nav.Link>
             {
