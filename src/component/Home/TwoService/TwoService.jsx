@@ -14,8 +14,9 @@ const TwoService = () => {
                     <div className="des">
                         <h4>Store Your Books</h4>
                         <hr />
-                        <p>Store as many books as you want in our warehouse .You can maintain your everything 
-                            satting in your home using our website.We are your next busyness partner.
+                        <p>Store as many books as you want in our warehouse .You can maintain your storage
+                        satting in your home using our website.We are  your next business partner to develop the
+                        to make your dream come true.
                         </p>
                     </div>
                 </div>
@@ -25,8 +26,10 @@ const TwoService = () => {
                     <div className="des">
                         <h4>Sell Your Books</h4>
                         <hr />
-                        <p>We will you to release your books whenever you want .You can maintain your everything 
-                            satting from using our website.We are your next busyness partner.
+                        <p>        
+                        You can sell and contact with your customer staying anywhere in the world .We also have transport system which offer you to have the best delevary system.
+                        We are  your next business partner to develop the
+                        to make your dream come true.
                         </p>
                     </div>
                 </div>

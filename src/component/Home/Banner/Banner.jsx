@@ -6,8 +6,8 @@ const Banner = () => {
     <div id="banner" className="banner">
       <div className="banner-text">
         <h1>Knowledge Store</h1>
-        <p>Find and store your books here</p>
-        <a href="home#stock">Store</a>
+        <p>Where we store your books</p>
+        <a href="home#stock">Check Store</a>
       </div>
     </div>
   );

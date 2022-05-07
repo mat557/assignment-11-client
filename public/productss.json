@@ -1,66 +1,66 @@
 [
     {
-        "name": "ENGINE DIAGNOSTIC",
-        "quantity":6,
-        "provider":"arizona production ltd",
+        "name": "Action and Adventure",
+        "quantity":87,
+        "provider":"Arizona production ltd",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "featuring characters involved in exciting and usually dangerous activities and adventures The movie is closer ",
         "img": "https://i.ibb.co/dGDkr4v/1.jpg"
     },
     {
-        "name": "WHEEL ALIGNMENT",
-        "quantity":6,
-        "provider":"arizona production ltd",
+        "name": "Classics",
+        "quantity":567,
+        "provider":"Amazon Kindle Direct Publishing",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "A classic is an outstanding example of a particular style; something of lasting worth or with a timeless qualit",
         "img": "https://i.ibb.co/tY8dmnP/2.jpg"
     },
     {
-        "name": "OIL CHANGING",
+        "name": "Comic Book or Graphic Novel",
         "quantity":6,
-        "provider":"arizona production ltd",
+        "provider":"IngramSpark",
         "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Graphic novels contain complete narratives, whether or not they are part of a larger series",
         "img": "https://i.ibb.co/Yh04YVw/3.jpg"
     },
     {
-        "name": "BRAKE REPARING",
-        "quantity":6,
-        "provider":"arizona production ltd",
+        "name": "Detective and Mystery",
+        "quantity":456,
+        "provider":"BookBaby",
         "price": "180",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "The traditional elements of the detective story are: (1) the seemingly perfect crime; (2) the wrongly accused suspect at whom circumstantial evidenc",
         "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
     },
     {
-        "name": "WASH AND GLASSING",
-        "quantity":6,
-        "provider":"arizona production ltd",
+        "name": "Fantasy",
+        "quantity":23,
+        "provider":"Blurb",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "A fantasy is something you imagine, which might involve dragons, unicorns, or an imaginary best friend",
         "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
     },
     {
-        "name": "WASH AND GLASSING",
-        "quantity":6,
-        "provider":"arizona production ltd",
+        "name": "Historical Fiction",
+        "quantity":64,
+        "provider":"Draft2Digital",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Broadly speaking, historical fiction is literature that takes place in the past",
         "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
     },
     {
-        "name": "WASH AND GLASSING",
-        "quantity":6,
-        "provider":"arizona production ltd",
+        "name": "Horror",
+        "quantity":645,
+        "provider":"Lulu",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "From facts about the horror genre to interesting historical trends, if you love horror this list is for you!",
         "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
     },
     {
-        "name": "COMPLETE ANALYSIS",
-        "quantity":6,
-        "provider":"arizona production ltd",
+        "name": "Literary Fiction",
+        "quantity":67,
+        "provider":"Trafford",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "description": "Whereas genre fiction from Romance to Dystopian Horror is plot-driven, Literary Fiction is character-driven",
         "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
     }
 ]

@@ -36,7 +36,7 @@ const SingleServiceDetail = () => {
       headers :{
         'content-type': 'application/json',
       },
-      body : JSON.stringify({final})
+      body : JSON.stringify({quantity: final})
     })
     .then(res => res.json())
     .then(product =>{
