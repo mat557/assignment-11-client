@@ -4,7 +4,7 @@ import SingleStock from '../SingleStock/SingleStock';
 import './StockDetails.css';
 
 const StockDetails = () => {
-    const [data,setData] = useCustom();
+    const [data] = useCustom();
     const products = data.slice(0,6);
     return (
         <div id='stock' className='total-stock'>

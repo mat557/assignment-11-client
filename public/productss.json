@@ -1,6 +1,5 @@
 [
     {
-        "_id": 1,
         "name": "ENGINE DIAGNOSTIC",
         "quantity":6,
         "provider":"arizona production ltd",
@@ -9,7 +8,6 @@
         "img": "https://i.ibb.co/dGDkr4v/1.jpg"
     },
     {
-        "_id": 2,
         "name": "WHEEL ALIGNMENT",
         "quantity":6,
         "provider":"arizona production ltd",
@@ -18,7 +16,6 @@
         "img": "https://i.ibb.co/tY8dmnP/2.jpg"
     },
     {
-        "_id": 3,
         "name": "OIL CHANGING",
         "quantity":6,
         "provider":"arizona production ltd",
@@ -27,7 +24,6 @@
         "img": "https://i.ibb.co/Yh04YVw/3.jpg"
     },
     {
-        "_id": 4,
         "name": "BRAKE REPARING",
         "quantity":6,
         "provider":"arizona production ltd",
@@ -36,7 +32,6 @@
         "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
     },
     {
-        "_id": 5,
         "name": "WASH AND GLASSING",
         "quantity":6,
         "provider":"arizona production ltd",
@@ -45,7 +40,6 @@
         "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
     },
     {
-        "_id": 6,
         "name": "WASH AND GLASSING",
         "quantity":6,
         "provider":"arizona production ltd",
@@ -54,7 +48,6 @@
         "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
     },
     {
-        "_id": 7,
         "name": "WASH AND GLASSING",
         "quantity":6,
         "provider":"arizona production ltd",
@@ -63,7 +56,6 @@
         "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
     },
     {
-        "_id": 8,
         "name": "COMPLETE ANALYSIS",
         "quantity":6,
         "provider":"arizona production ltd",

@@ -5,6 +5,7 @@ import Register from "./component/Authenticate/Register/Register";
 import RequireAuth from "./component/Authenticate/RequireAuth/RequireAuth";
 import Blog from "./component/Blog/Blog";
 import Home from "./component/Home/Home/Home";
+import ManageInventory from "./component/Home/ManageInventory/ManageInventory";
 import SingleServiceDetail from "./component/Home/SingleServiceDetail/SingleServiceDetail";
 import Login from "./component/Login/Login";
 import Footer from "./component/Shared/Footer/Footer";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/inventory" element={<ManageInventory></ManageInventory>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>

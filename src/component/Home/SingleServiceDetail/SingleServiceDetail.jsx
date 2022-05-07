@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import useCustom from "../../../hook/useCustom";
 
 // https://stackoverflow.com/questions/72082801/cant-find-the-matching-array-of-object-search-by-id
 
@@ -17,14 +16,22 @@ const SingleServiceDetail = () => {
     .then(data => setService(data))
   },[])
   
-  // const singleItem = data.find((element) => element._id === idOfService);
   
-  let result;
-  
-  const handleDelivered = ()=>{
-    const item = (service.quantity);
-    result = item - 1;
-  }
+  const handleDelivered = (number) => {
+    // axios.patch(
+    //   `http://localhost:5000/items/${id}`,
+    //   {
+    //     quantity: item.quantity + number,
+    //   },
+    //   {
+    //     headers: {
+    //       Authorization: `Bearer ${localStorage.getItem("token")}`,
+    //     },
+    //   }
+    // );
+    // const newItem = { ...item, quantity: item.quantity + number };
+    // setItem(newItem);
+  };
 
 
   return (
@@ -39,9 +46,9 @@ const SingleServiceDetail = () => {
               <Card.Text>
                 {service.description}
               </Card.Text>
-              <p>Price:{service.price} & Quantity :{result}</p>
+              <p>Price:{service.price} & Quantity :{service.quantity}</p>
               <p>Provider:{service.provider}</p>
-              <button onClick={handleDelivered} className="btn-style mx-auto d-block">Delivered</button>
+              <button onClick={() => handleDelivered(-1)} className="btn-style mx-auto d-block">Delivered</button>
             </Card.Body>
           </Card>
         </div>
