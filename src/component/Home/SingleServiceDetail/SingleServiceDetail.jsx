@@ -15,7 +15,7 @@ const SingleServiceDetail = () => {
     fetch(url)
     .then(res => res.json())
     .then(data => setService(data))
-  },[])
+  },[idOfService])
 
 
   useEffect(()=>{
@@ -25,11 +25,14 @@ const SingleServiceDetail = () => {
     .then(data => {
       setRest(data)
     })
-  },[])
+
+  },[rest]);
+
+    
   
-  const handleDelivered = () =>{
+  const handleDelivered = (num) =>{
     const total =  service.quantity;
-    const final = (total) - 1;
+    const final = (total) + num;
     const url = `http://localhost:5000/services/${idOfService}`;
     fetch(url,{
       method :'PUT',
@@ -66,7 +69,7 @@ const SingleServiceDetail = () => {
               </Card.Text>
               <p>Price:{service.price} & Quantity :{rest.quantity}</p>
               <p>Provider:{service.provider}</p>
-              <button onClick={handleDelivered} className="btn-style mx-auto d-block">Delivered</button>
+              <button onClick={() => handleDelivered(-1)} className="btn-style mx-auto d-block">Delivered</button>
             </Card.Body>
           </Card>
         </div>

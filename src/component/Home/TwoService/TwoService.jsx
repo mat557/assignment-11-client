@@ -1,7 +1,7 @@
 import React from 'react';
 import './TwoServices.css';
 import photo1 from '../../../photos/banner-1.jpg';
-import photo2 from '../../../photos/banner-2.jpg';
+import photo2 from '../../../photos/truck.jpg';
 
 const TwoService = () => {
     return (

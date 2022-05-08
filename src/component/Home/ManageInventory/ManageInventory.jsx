@@ -28,7 +28,7 @@ const ManageInventory = () => {
       <Table responsive striped bordered hover >
         <thead>
           <tr>
-            <th>Id</th>
+            <th>Quantity</th>
             <th>Prod. Name</th>
             <th>Description</th>
             <th>Controll</th>

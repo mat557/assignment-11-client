@@ -3,64 +3,82 @@
         "name": "Action and Adventure",
         "quantity":87,
         "provider":"Arizona production ltd",
+        "email":"matasnim11@gmail.com",
         "price": "300",
         "description": "featuring characters involved in exciting and usually dangerous activities and adventures The movie is closer ",
-        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+        "img": "https://i.ibb.co/dMd6mHL/pexels-mikey-dabro-1002655.jpg"
     },
     {
         "name": "Classics",
         "quantity":567,
         "provider":"Amazon Kindle Direct Publishing",
+        "email":"matasnim11@gmail.com",
         "price": "100",
         "description": "A classic is an outstanding example of a particular style; something of lasting worth or with a timeless qualit",
-        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+        "img": "https://i.ibb.co/BryWJ6g/pexels-hu-nh-t-2098691.jpg"
     },
     {
         "name": "Comic Book or Graphic Novel",
         "quantity":6,
         "provider":"IngramSpark",
+        "email":"matasnim11@gmail.com",
         "price": "150",
         "description": "Graphic novels contain complete narratives, whether or not they are part of a larger series",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+        "img": "https://i.ibb.co/LPNxyhr/pexels-stas-knop-1340588.jpg"
     },
     {
         "name": "Detective and Mystery",
         "quantity":456,
         "provider":"BookBaby",
+        "email":"matasnim11@gmail.com",
         "price": "180",
         "description": "The traditional elements of the detective story are: (1) the seemingly perfect crime; (2) the wrongly accused suspect at whom circumstantial evidenc",
-        "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
+        "img": "https://i.ibb.co/q5h4JB3/pexels-tirachard-kumtanom-733854.jpg"
     },
     {
         "name": "Fantasy",
         "quantity":23,
         "provider":"Blurb",
+        "email":"matasnim11@gmail.com",
         "price": "100",
         "description": "A fantasy is something you imagine, which might involve dragons, unicorns, or an imaginary best friend",
-        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+        "img": "https://i.ibb.co/4sRS24z/pexels-pixabay-159872.jpg"
     },
     {
         "name": "Historical Fiction",
         "quantity":64,
         "provider":"Draft2Digital",
+        "email":"matasnim11@gmail.com",
         "price": "100",
         "description": "Broadly speaking, historical fiction is literature that takes place in the past",
-        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+        "img": "https://i.ibb.co/Dfp3K7c/pexels-wendy-van-zyl-1112048.jpg"
     },
     {
         "name": "Horror",
         "quantity":645,
         "provider":"Lulu",
+        "email":"matasnim11@gmail.com",
         "price": "100",
         "description": "From facts about the horror genre to interesting historical trends, if you love horror this list is for you!",
-        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+        "img": "https://i.ibb.co/tXxH7w8/pexels-thought-catalog-904616.jpg"
     },
     {
         "name": "Literary Fiction",
         "quantity":67,
         "provider":"Trafford",
+        "email":"matasnim11@gmail.com",
         "price": "300",
         "description": "Whereas genre fiction from Romance to Dystopian Horror is plot-driven, Literary Fiction is character-driven",
-        "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
+        "img": "https://i.ibb.co/QXy74Ny/pexels-nitin-arya-1029141.jpg"
     }
 ]
+
+
+// https://i.ibb.co/dMd6mHL/pexels-mikey-dabro-1002655.jpg
+// https://i.ibb.co/BryWJ6g/pexels-hu-nh-t-2098691.jpg
+// https://i.ibb.co/LPNxyhr/pexels-stas-knop-1340588.jpg
+// https://i.ibb.co/q5h4JB3/pexels-tirachard-kumtanom-733854.jpg
+// https://i.ibb.co/4sRS24z/pexels-pixabay-159872.jpg
+// https://i.ibb.co/Dfp3K7c/pexels-wendy-van-zyl-1112048.jpg
+// https://i.ibb.co/tXxH7w8/pexels-thought-catalog-904616.jpg
+// https://i.ibb.co/QXy74Ny/pexels-nitin-arya-1029141.jpg
