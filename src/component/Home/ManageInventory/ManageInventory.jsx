@@ -11,7 +11,7 @@ const ManageInventory = () => {
       
     useEffect(()=>{
         const email = user?.email;
-        // console.log(email)
+        console.log(email)
         const url = `http://localhost:5000/services?email=${email}`;
         console.log(url)
         fetch(url)
