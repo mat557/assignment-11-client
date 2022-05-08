@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from "../../../Firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 
 const ManageInventory = () => {
-    const [user] = useAuthState(auth);
+    const [user,loading] = useAuthState(auth);
     const [items,setItems] = useState([]);
-
-    
+    const [newItems,setNewItems] = useState([]);
       
     useEffect(()=>{
         const email = user?.email;
@@ -16,7 +16,7 @@ const ManageInventory = () => {
         console.log(url)
         fetch(url)
         .then(res => res.json())
-        .then(data => setItems(data))
+        .then(data => setNewItems(data))
     },[user])
 
 
@@ -54,6 +54,9 @@ const ManageInventory = () => {
         body: JSON.stringify(productData)
       }).then(res => res.json())
     }
+    if(loading){
+      return <Loading></Loading>
+  }
     
 
   return (
@@ -70,7 +73,7 @@ const ManageInventory = () => {
         </thead>
         <tbody>
           {
-              items.map((item) =>
+              newItems.map((item) =>
                 <tr key={item._id}>
                 <td>{item.quantity}</td>
                 <td>{item.name}</td>
