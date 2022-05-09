@@ -5,7 +5,7 @@ const useCustom = () =>{
     
     // process.env.PUBLIC_URL}/productss.json
     useEffect(()=>{
-         fetch(`http://localhost:5000/services`)
+         fetch(`https://stormy-brook-59939.herokuapp.com/services`)
          .then(res => res.json())
          .then(data => setData(data))
      },[])

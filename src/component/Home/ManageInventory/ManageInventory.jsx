@@ -10,9 +10,13 @@ const ManageInventory = () => {
     const [newItems,setNewItems] = useState([]);
       
     useEffect(()=>{
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
         const email = user?.email;
-        console.log(email)
-        const url = `http://localhost:5000/services?email=${email}`;
+        console.log(email,requestOptions)
+        const url = `https://stormy-brook-59939.herokuapp.com/services?email=${email}`;
         console.log(url)
         fetch(url)
         .then(res => res.json())
@@ -23,7 +27,7 @@ const ManageInventory = () => {
     const handleDelete = (id) =>{
         const confirmation = window.confirm("Are you sure?");
         if(confirmation){
-            const url = `http://localhost:5000/services/${id}`;
+            const url = `https://stormy-brook-59939.herokuapp.com/services/${id}`;
             fetch(url,{
                 method : "DELETE"
             })
@@ -44,9 +48,10 @@ const ManageInventory = () => {
         email : user?.email,
         price : event.target.price.value,
         description : event.target.description.value,
+        img : event.target.other.value,
       }
       // console.log(productData)
-      fetch('http://localhost:5000/services', {
+      fetch('https://stormy-brook-59939.herokuapp.com/services', {
         method:'POST',
         headers: {
           'Content-type' : 'Application/json'
@@ -61,7 +66,7 @@ const ManageInventory = () => {
 
   return (
     <div className="container">
-        <h3 className="text-center style mt-3">All your data at one place:{items.length}</h3>
+        <h3 className="text-center style mt-3">All your data at one place:</h3>
       <Table responsive striped bordered hover >
         <thead>
           <tr>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Firebase.init";
@@ -24,6 +24,9 @@ const EmailLogin = () => {
     // navigate('/home')
     navigate(from, { replace: true });
   }
+
+  
+
 
   return (
     <div>

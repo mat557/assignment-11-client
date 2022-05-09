@@ -11,7 +11,7 @@ const SingleServiceDetail = () => {
   
 
   useEffect(() => {
-    const url = `http://localhost:5000/services/${idOfService}`;
+    const url = `https://stormy-brook-59939.herokuapp.com/services/${idOfService}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -26,7 +26,7 @@ const SingleServiceDetail = () => {
     const newUpdate = rest.quantity + parseInt(updatedValue);
     console.log(newUpdate);
 
-    const url = `http://localhost:5000/services/${idOfService}`;
+    const url = `https://stormy-brook-59939.herokuapp.com/services/${idOfService}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -46,7 +46,7 @@ const SingleServiceDetail = () => {
   const handleDelivered = (num) => {
     const total = rest.quantity;
     const final = total + num;
-    const url = `http://localhost:5000/services/${idOfService}`;
+    const url = `https://stormy-brook-59939.herokuapp.com/services/${idOfService}`;
     fetch(url, {
       method: "PUT",
       headers: {
