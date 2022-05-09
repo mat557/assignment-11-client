@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, {  useRef } from "react";
 import "./Login.css";
 import { Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -26,11 +26,7 @@ const Login = () => {
     navigate(from, { replace: true });
   }
 
-  // useEffect(()=>{
-  //   if (user) {
-  //       navigate(from, { replace: true });
-  //     }
-  // },[user,from])
+  
 
   if(loading || sending){
     return <Loading></Loading>

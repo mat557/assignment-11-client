@@ -10,15 +10,15 @@ const ManageInventory = () => {
     const [newItems,setNewItems] = useState([]);
       
     useEffect(()=>{
-      var requestOptions = {
+      const requestOptions = {
         method: 'GET',
         redirect: 'follow'
       };
         const email = user?.email;
-        console.log(email,requestOptions)
+        // console.log(email,requestOptions)
         const url = `https://stormy-brook-59939.herokuapp.com/services?email=${email}`;
-        console.log(url)
-        fetch(url)
+        // console.log(url)
+        fetch(url,requestOptions)
         .then(res => res.json())
         .then(data => setNewItems(data))
     },[user])
